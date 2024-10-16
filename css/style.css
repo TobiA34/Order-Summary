@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  /* Primary */
+--Pale-blue: hsl(225, 100%, 94%);
+--Bright-blue: hsl(245, 75%, 52%);
+
+/* Neutral */
+--Very-pale-blue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224, 23%, 55%);
+--Dark-blue: hsl(223, 47%, 23%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--Bright-blue);
+    font-weight: bold;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+   background: url(images/pattern-background-mobile.svg), var(--clr-primary-pale-blue);
+  background-repeat: no-repeat;
+  background-size: contain;
+    padding: 0 24px;
+    font-family: "Red Hat Display", sans-serif;
+    background: #F2F2F2;
+    position: relative;
+}
+
+.curved {
+    background-image: url(../images/pattern-background-mobile.svg);
+    background: #D6E1FF;
+    position: absolute; /* Keep this as is */
+    z-index: -1; /* Keep this as is */
+    width: 100%; /* Ensure it covers the full width */
+    height: 100%; /* Ensure it covers the full height */
+    clip-path: polygon(0 100%, 100% 70%, 100% 100%, 100% 0, 0 0); /* Create a wave shape */
+    top: 0; /* Ensure it starts from the top */
+}
+
+ .w-70 {
+    width: 100%;
+ }
+
+.card {
+    background: var(--Very-pale-blue);
+    display: flex;
+    flex-direction: column;
+    width: 327px;
+    height: auto;
+    z-index: 1; /* Ensure the card is above the curved background */
+      box-shadow: 0 15px 25px 0 hsla(245, 75%, 52%, .11);
+
+}
+
+.card{
+    border-radius: 24px 24px 24px 24px;
+}
+
+.card img {
+    border-radius: 24px 24px 0 0;
+}
+
+.text-center {
+ text-align: center;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.mt-32 {
+    margin-top: 32px;
+}
+.mb-16 {
+  margin-bottom: 16px;
+
+}
+
+
+.row {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 41px;
+    margin-bottom: 24px;
+}
+
+.img-icon {
+    height: 48px;
+    width: 48px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+#pay-btn{
+     padding: 15px 100px ;
+     border-radius: 8px;
+     border: none;
+     color: var(--Very-pale-blue);
+     background: var(--Bright-blue);
+     font-weight: bold;
+    box-shadow: 0 15px 20px 0 hsla(245, 75%, 52%, .25);
+
+ }
+
+#cancel-btn {
+    margin-top: 24px;
+    margin-bottom: 32px;
+    text-decoration: none;
+    color: var(--Bright-blue);
+    font-weight: bold;
+    opacity: 0.6;
+}
+
+@media (width > 768px) {
+    body {
+            padding: 0 100px;
+    }
+
+    .card {
+    width: 450px;
+    height: auto;
+    }
+.curved {
+    background-image: url(../images/pattern-background-desktop.svg);
+    height: 30%;
+ 
+}
+  
+}
